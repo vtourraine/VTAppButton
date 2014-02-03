@@ -2,6 +2,7 @@
 
 _`UIButton` looking like an app icon._
 
+![Demo App Button](http://vtourraine.github.io/VTAppButton/img/VTAppButton-Demo.png)
 
 ## Requirements
 
