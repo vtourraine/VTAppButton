@@ -25,16 +25,44 @@
 
 @import QuartzCore;
 
+const CGFloat VTAppButtonDefaultRadius       = 12;
+const CGFloat VTAppButtonDefaultImagePadding = 8;
+const CGFloat VTAppButtonDefaultFontSize     = 11;
+const CGFloat VTAppButtonDefaultTitleHeight  = 20;
+const CGFloat VTAppButtonDefaultTitleInsetX = -10;
+
+@interface VTAppButton ()
+
+@property (nonatomic, copy) NSString *appIdentifier;
+
+@end
+
+
 @implementation VTAppButton
+
++ (instancetype)appButtonWithAppIdentifier:(NSString *)appIdentifier
+                                     title:(NSString *)title
+                                     image:(UIImage *)image
+{
+    VTAppButton *appButton = [self buttonWithType:UIButtonTypeCustom];
+
+    appButton.appIdentifier = appIdentifier;
+
+    [appButton setTitle:title forState:UIControlStateNormal];
+    [appButton setImage:image forState:UIControlStateNormal];
+
+    return appButton;
+}
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
 
     if (self) {
-        [self setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
+        [self setTitleColor:UIColor.blackColor    forState:UIControlStateNormal];
+        [self setTitleColor:UIColor.darkGrayColor forState:UIControlStateHighlighted];
 
-        self.titleLabel.font = [UIFont systemFontOfSize:11];
+        self.titleLabel.font = [UIFont systemFontOfSize:VTAppButtonDefaultFontSize];
     }
 
     return self;
@@ -44,11 +72,14 @@
 {
     [super layoutSubviews];
 
-    self.imageView.layer.cornerRadius = 12;
+    self.imageView.layer.cornerRadius = VTAppButtonDefaultRadius;
 
-    self.imageView.frame  = CGRectInset(CGRectMake(0, 0, CGRectGetWidth(self.frame), CGRectGetWidth(self.frame)), 8, 8);
+    self.imageView.frame  = CGRectInset(CGRectMake(0, 0, CGRectGetWidth(self.frame), CGRectGetWidth(self.frame)),
+                                        VTAppButtonDefaultImagePadding, VTAppButtonDefaultImagePadding);
+
     self.titleLabel.frame = CGRectInset(CGRectMake(0, CGRectGetMaxY(self.imageView.frame),
-                                                   CGRectGetWidth(self.frame), 20), -10, 0);
+                                                   CGRectGetWidth(self.frame), VTAppButtonDefaultTitleHeight),
+                                        VTAppButtonDefaultTitleInsetX, 0);
     self.titleLabel.textAlignment = NSTextAlignmentCenter;
 }
 

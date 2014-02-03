@@ -25,6 +25,10 @@
 
 @interface VTAppButton : UIButton
 
-@property (nonatomic, copy) NSString *appIdentifier;
+@property (nonatomic, copy, readonly) NSString *appIdentifier;
+
++ (instancetype)appButtonWithAppIdentifier:(NSString *)appIdentifier
+                                     title:(NSString *)title
+                                     image:(UIImage *)image;
 
 @end
