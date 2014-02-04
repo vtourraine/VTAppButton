@@ -25,8 +25,14 @@
 
 @interface VTAppButton : UIButton
 
+/**
+ App Store identifier for the App. You can use this value in the touch action method to redirect the user to your app, for instance using a `SKStoreProductViewController`.
+ */
 @property (nonatomic, copy, readonly) NSString *appIdentifier;
 
+/**
+ Creates a new app button configured with the given app identifier, title, and image.
+ */
 + (instancetype)appButtonWithAppIdentifier:(NSString *)appIdentifier
                                      title:(NSString *)title
                                      image:(UIImage *)image;
