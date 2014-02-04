@@ -6,7 +6,7 @@ _`UIButton` looking like an app icon._
 
 ## How to Use
 
-The `VTAcknowledgementsViewController` instance is usually pushed to an existing `UINavigationController`.
+You can create a `VTAppButton` with the custom initializer, then use it like any other `UIButton` (setting a frame, adding a target-action, and so on).
 
 ``` objc
 UIButton *button = [VTAppButton appButtonWithAppIdentifier:@"579440241"
