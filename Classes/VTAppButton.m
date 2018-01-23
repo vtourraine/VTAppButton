@@ -1,7 +1,7 @@
 //
 // VTAppButton.m
 //
-// Copyright (c) 2014 Vincent Tourraine (http://www.vtourraine.net)
+// Copyright (c) 2014-2018 Vincent Tourraine (http://www.vtourraine.net)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -80,7 +80,9 @@ const CGFloat VTAppButtonDefaultTitleInsetX = -10;
     self.titleLabel.frame = CGRectInset(CGRectMake(0, CGRectGetMaxY(self.imageView.frame),
                                                    CGRectGetWidth(self.frame), VTAppButtonDefaultTitleHeight),
                                         VTAppButtonDefaultTitleInsetX, 0);
-    self.titleLabel.textAlignment = NSTextAlignmentCenter;
+    if (@available(iOS 6.0, *)) {
+        self.titleLabel.textAlignment = NSTextAlignmentCenter;
+    }
 }
 
 @end
