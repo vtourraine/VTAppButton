@@ -80,9 +80,7 @@ const CGFloat VTAppButtonDefaultTitleInsetX = -10;
     self.titleLabel.frame = CGRectInset(CGRectMake(0, CGRectGetMaxY(self.imageView.frame),
                                                    CGRectGetWidth(self.frame), VTAppButtonDefaultTitleHeight),
                                         VTAppButtonDefaultTitleInsetX, 0);
-    if (@available(iOS 6.0, *)) {
-        self.titleLabel.textAlignment = NSTextAlignmentCenter;
-    }
+    self.titleLabel.textAlignment = NSTextAlignmentCenter;
 }
 
 @end
