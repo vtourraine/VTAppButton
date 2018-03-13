@@ -9,9 +9,7 @@ _`UIButton` looking like an app icon._
 You can create a `VTAppButton` with the custom initializer, then use it like any other `UIButton` (setting a frame, adding a target-action, and so on).
 
 ``` objc
-UIButton *button = [VTAppButton appButtonWithAppIdentifier:@"579440241"
-                                                     title:@"1List"
-                                                     image:iconImage];
+UIButton *button = [VTAppButton appButtonWithAppIdentifier:@"579440241" title:@"1List" image:iconImage];
 ```
 
 ## Requirements
@@ -26,4 +24,4 @@ VTAppButton was created by [Vincent Tourraine](http://www.vtourraine.net).
 
 ## License
 
-VTAppButton is available under the MIT license. See the LICENSE file for more info.
+VTAppButton is available under the MIT license. See the LICENSE.txt file for more info.
