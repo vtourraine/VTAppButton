@@ -1,7 +1,7 @@
 //
 // VTAppButton.h
 //
-// Copyright (c) 2014 Vincent Tourraine (http://www.vtourraine.net)
+// Copyright (c) 2014-2018 Vincent Tourraine (http://www.vtourraine.net)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -26,7 +26,9 @@
 @interface VTAppButton : UIButton
 
 /**
- App Store identifier for the App. You can use this value in the touch action method to redirect the user to your app, for instance using a `SKStoreProductViewController`.
+ App Store identifier for the App.
+
+ You can use this value in the touch action method to redirect the user to your app, for instance using a `SKStoreProductViewController`.
  */
 @property (nonatomic, copy, readonly) NSString *appIdentifier;
 
