@@ -1,7 +1,7 @@
 //
 // VTAppButton.h
 //
-// Copyright (c) 2014-2018 Vincent Tourraine (http://www.vtourraine.net)
+// Copyright (c) 2014-2019 Vincent Tourraine (http://www.vtourraine.net)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -35,8 +35,6 @@
 /**
  Creates a new app button configured with the given app identifier, title, and image.
  */
-+ (instancetype)appButtonWithAppIdentifier:(NSString *)appIdentifier
-                                     title:(NSString *)title
-                                     image:(UIImage *)image;
++ (instancetype)appButtonWithAppIdentifier:(NSString *)appIdentifier title:(NSString *)title image:(UIImage *)image;
 
 @end

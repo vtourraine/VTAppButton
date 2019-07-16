@@ -1,7 +1,7 @@
 //
 // VTAppButton.m
 //
-// Copyright (c) 2014-2018 Vincent Tourraine (http://www.vtourraine.net)
+// Copyright (c) 2014-2019 Vincent Tourraine (http://www.vtourraine.net)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -27,7 +27,6 @@
 
 const CGFloat VTAppButtonDefaultRadius = 12;
 const CGFloat VTAppButtonDefaultImagePadding = 8;
-const CGFloat VTAppButtonDefaultFontSize = 11;
 const CGFloat VTAppButtonDefaultTitleHeight = 20;
 const CGFloat VTAppButtonDefaultTitleInsetX = -10;
 
@@ -55,10 +54,16 @@ const CGFloat VTAppButtonDefaultTitleInsetX = -10;
     self = [super initWithFrame:frame];
 
     if (self) {
-        [self setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
-        [self setTitleColor:UIColor.darkGrayColor forState:UIControlStateHighlighted];
+        if (@available(iOS 13.0, *)) {
+            [self setTitleColor:UIColor.labelColor forState:UIControlStateNormal];
+            [self setTitleColor:UIColor.secondaryLabelColor forState:UIControlStateHighlighted];
+        }
+        else {
+            [self setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
+            [self setTitleColor:UIColor.darkGrayColor forState:UIControlStateHighlighted];
+        }
 
-        self.titleLabel.font = [UIFont systemFontOfSize:VTAppButtonDefaultFontSize];
+        self.titleLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleCaption2];
     }
 
     return self;
