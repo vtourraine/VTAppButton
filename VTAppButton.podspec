@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.author             = { 'Vincent Tourraine' => 'me@vtourraine.net' }
   s.social_media_url = 'http://twitter.com/vtourraine'
 
-  s.platform     = :ios, '6.0'
+  s.platform     = :ios, '9.0'
 
   s.source       = { :git => 'https://github.com/vtourraine/VTAppButton.git', :tag => '0.1' }
   s.source_files = 'Classes', 'Classes/**/*.{h,m}'

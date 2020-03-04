@@ -1,7 +1,7 @@
 //
 // VTAppButton.m
 //
-// Copyright (c) 2014-2019 Vincent Tourraine (http://www.vtourraine.net)
+// Copyright (c) 2014-2020 Vincent Tourraine (http://www.vtourraine.net)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -63,7 +63,9 @@ const CGFloat VTAppButtonDefaultTitleInsetX = -10;
             [self setTitleColor:UIColor.darkGrayColor forState:UIControlStateHighlighted];
         }
 
-        self.titleLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleCaption2];
+        // Need Auto Layout
+        // self.titleLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleCaption2];
+        self.titleLabel.font = [UIFont systemFontOfSize:11 weight:UIFontWeightRegular];
     }
 
     return self;
