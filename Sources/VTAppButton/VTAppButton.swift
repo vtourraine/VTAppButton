@@ -23,19 +23,19 @@
 
 import UIKit
 
-class VTAppButton: UIButton {
+open class VTAppButton: UIButton {
     
     /**
      App Store identifier for the App.
 
      You can use this value in the touch action method to redirect the user to your app, for instance using a `SKStoreProductViewController`.
      */
-    let appIdentifier: String
+    public let appIdentifier: Int
     
     /**
      Creates a new app button configured with the given app identifier, title, and image.
      */
-    required init(appIdentifier: String, title: String, image: UIImage) {
+    required public init(appIdentifier: Int, title: String, image: UIImage) {
         self.appIdentifier = appIdentifier
         super.init(type: .custom)
         
@@ -56,7 +56,7 @@ class VTAppButton: UIButton {
         titleLabel?.font = UIFont.systemFont(ofSize: 11, weight: .regular)
     }
 
-    required init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -67,7 +67,7 @@ class VTAppButton: UIButton {
         static let TitleInsetX: CGFloat = -10
     }
 
-    override func layoutSubviews() {
+    public override func layoutSubviews() {
         super.layoutSubviews()
         
         guard let imageView = imageView else {
