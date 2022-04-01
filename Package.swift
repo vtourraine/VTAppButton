@@ -6,7 +6,7 @@ let package = Package(
     name: "VTAppButton",
     defaultLocalization: "en",
     platforms: [
-        .iOS(.v11)
+        .iOS(.v13)
     ],
     products: [
         .library(name: "VTAppButton", targets: ["VTAppButton"])
