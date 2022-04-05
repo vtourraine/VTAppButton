@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0 (5 April 2022)
+## 1.0.0 (5 April 2022)
 
 - Rewritten in Swift
 - Display continuous corners
