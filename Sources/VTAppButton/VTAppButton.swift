@@ -65,6 +65,7 @@ open class VTAppButton: UIButton {
         }
         
         imageView.layer.cornerRadius = K.Radius
+        imageView.layer.cornerCurve = .continuous
         imageView.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.width).insetBy(dx: K.ImagePadding, dy: K.ImagePadding)
 
         let titleLabelFrame = CGRect(x: 0, y: imageView.frame.maxY, width: frame.width, height: K.TitleHeight)
