@@ -14,12 +14,12 @@ UIButton *button = [VTAppButton appButtonWithAppIdentifier:@"579440241" title:@"
 
 ## Requirements
 
-VTAppButton requires iOS 5.0 and above, and uses ARC.
+VTAppButton requires iOS 13.0, and is written in Swift 5.
 
 
 ## Credits
 
-VTAppButton was created by [Vincent Tourraine](http://www.vtourraine.net).
+VTAppButton was created by [Vincent Tourraine](https://www.vtourraine.net).
 
 
 ## License
