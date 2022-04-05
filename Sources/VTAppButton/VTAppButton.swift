@@ -51,10 +51,10 @@ open class VTAppButton: UIButton {
     }
     
     struct K {
-        static let Radius: CGFloat = 12
-        static let ImagePadding: CGFloat = 8
-        static let TitleHeight: CGFloat = 20
-        static let TitleInsetX: CGFloat = -10
+        static let radius: CGFloat = 12
+        static let imagePadding: CGFloat = 8
+        static let titleHeight: CGFloat = 20
+        static let titleInsetX: CGFloat = -10
     }
 
     public override func layoutSubviews() {
@@ -64,12 +64,12 @@ open class VTAppButton: UIButton {
             return
         }
         
-        imageView.layer.cornerRadius = K.Radius
+        imageView.layer.cornerRadius = K.radius
         imageView.layer.cornerCurve = .continuous
-        imageView.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.width).insetBy(dx: K.ImagePadding, dy: K.ImagePadding)
+        imageView.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.width).insetBy(dx: K.imagePadding, dy: K.imagePadding)
 
-        let titleLabelFrame = CGRect(x: 0, y: imageView.frame.maxY, width: frame.width, height: K.TitleHeight)
-        titleLabel?.frame = titleLabelFrame.insetBy(dx: K.TitleInsetX, dy: 0)
+        let titleLabelFrame = CGRect(x: 0, y: imageView.frame.maxY, width: frame.width, height: K.titleHeight)
+        titleLabel?.frame = titleLabelFrame.insetBy(dx: K.titleInsetX, dy: 0)
         titleLabel?.textAlignment = .center
     }
 }
